@@ -11,11 +11,15 @@ def is_prime(func):
         else:
             print('prostoe')
 
+        print(result)
+
 
     return wrapper
 @is_prime
 def sum_three(a, b, c):
-
     return a + b + c
 
-result = sum_three(2, 3, 6)
+result = sum_three(2, 3, 5)
+
+
+
