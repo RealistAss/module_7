@@ -28,13 +28,9 @@ class WordsFinder:
         dirt = {}
         c = self.get_all_words()
         for file_names, words in c.items():
-            if word in words:
-                dirt[file_names] = words.count(word)
+            if word.lower() in words:
+                dirt[file_names] = words.count(word.lower())
                 return dirt
-
-
-
-
 
 
 
@@ -44,4 +40,4 @@ w1 = WordsFinder('text.txt')
 print(w1.get_all_words())
 
 print(w1.find('TEXT'))
-print(w1.count('for'))
+print(w1.count('FoR'))
