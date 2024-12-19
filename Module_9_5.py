@@ -17,16 +17,19 @@ class Iterator:
     def __next__(self):
         if (self.step > 0 and self.pointer > self.stop) or (self.step < 0 and self.pointer < self.stop):
             raise StopIteration
+
         self.pointer += self.step
-        return self
+        return self.pointer
 
 try:
 
     iter1 = Iterator(-5, 1, 1)
+    print(iter1)
 
     for i in iter1:
 
         print(i, end=' ')
+
 
 except StepValueError:
 
